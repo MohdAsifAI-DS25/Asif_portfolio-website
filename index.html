@@ -22,7 +22,7 @@
 
     <style>
         :root {
-            --primary-color: #4d06e7;
+            --primary-color: #a863f7;
             --secondary-color: #b0ff39;
             --accent-color: #07f8e4;
             --dark-color: #1a1a2e;
@@ -331,6 +331,8 @@
         }
     </style>
 </head>
+<!-- Bootstrap JS Bundle (Required for Carousel Controls) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -377,49 +379,107 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="images/ASIF.jpg" alt="Mohammad Asif" class="profile-img img-fluid">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Data Analyst & Python Developer</h3>
-                    <p>A 2024 graduate with a CGPA of 7.12, possessing a strong foundation in Python, SQL, Pandas, NumPy, and Data Structures & Algorithms (DSA). Skilled in data visualization and analysis using Power BI, Tableau, and Matplotlib, with hands-on experience in cleaning, transforming, and analyzing complex datasets to extract meaningful insights.</p>
-                    
-                    <div class="personal-info">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p><strong>Name:</strong> Mohammad Asif</p>
-                                <p><strong>Email:</strong> mohdasif.m1996@gmail.com</p>
-                                <p><strong>Location:</strong> Hyderabad, India</p>
-                            </div>
-                            <div class="col-md-6">
-                                <p><strong>Experience:</strong> Fresher</p>
-                                <p><strong>Degree:</strong> B.Tech (IT)</p>
-                                <p><strong>Freelance:</strong> Available</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="Data_Anlytics.pdf" class="btn btn-primary btn-custom mt-3" download>
-                        <i class="fas fa-download mr-2"></i>Download Resume
-                    </a>
-                </div>
-            </div>
+    <section id="about" class="about-section py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center mb-4">
+      <h2 class="section-title" style="color: black;">About Me</h2>
+      <p class="section-subtitle">Get to know me better</p>
+    </div>
+
+    <div class="row align-items-center">
+      <!-- Left Column: Image Carousel -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="4"></button>
+  </div>
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/AI.jpg" class="d-block w-100 img-fluid rounded" alt="AI Image">
+    </div>
+    <div class="carousel-item">
+      <img src="images/aiml-homepage-01.jpg" class="d-block w-100 img-fluid rounded" alt="Machine Learning">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Analytics.gif" class="d-block w-100 img-fluid rounded" alt="Data Roles">
+    </div>
+    <div class="carousel-item">
+      <img src="images/MLEngi.jpg" class="d-block w-100 img-fluid rounded" alt="Dashboard Visualization">
+    </div>
+    <div class="carousel-item">
+      <img src="images/NLP.jpg" class="d-block w-100 img-fluid rounded" alt="Python Developer">
+    </div>
+  </div>
+<style>
+    #aboutCarousel img {
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.6s ease;
+}
+#aboutCarousel img:hover {
+  transform: scale(1.05);
+}
+</style>
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
         </div>
-    </section>
+      </div>
+
+      <!-- Right Column: About Info -->
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-5" style="color: #7c3a7c;">Data Analyst & Python Developer</h3>
+
+        <p>
+          A 2024 graduate with a CGPA of 7.12, possessing a strong foundation in Python, SQL, Pandas, NumPy, 
+          and Data Structures & Algorithms (DSA). Skilled in data visualization and analysis using Power BI, 
+          Tableau, and Matplotlib, with hands-on experience in cleaning, transforming, and analyzing complex 
+          datasets to extract meaningful insights.
+        </p>
+
+        <div class="personal-info mt-3">
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Name:</strong> Mohammad Asif</p>
+              <p><strong>Email:</strong> mohdasif.m1996@gmail.com</p>
+              <p><strong>Location:</strong> Hyderabad, India</p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Experience:</strong> Fresher</p>
+              <p><strong>Degree:</strong> B.Tech (IT)</p>
+              <p><strong>Freelance:</strong> Available</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="ATSResume.pdf" class="btn btn-primary btn-custom mt-4" download>
+          <i class="fas fa-download me-2"></i>Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Skills Section -->
-    <section id="skills" class="about-section" style="background: white;">
+    <section id="skills" class="about-section" style="background:white;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">My Skills</h2>
+                <h2 class="section-title" style="color: #007bff;">My Skills</h2>
+
                 <p class="section-subtitle">Technologies I work with</p>
             </div>
             
@@ -427,37 +487,39 @@
                 <div class="col-lg-6">
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Python</span>
-                            <span>90%</span>
-                        </div>
+  <span style="margin-right: 450px;">Python</span>
+  <span>75%</span>
+</div>
+
                         <div class="skill-level">
-                            <div class="skill-progress" data-width="90"></div>
+                            <div class="skill-progress" data-width="80"></div>
                         </div>
                     </div>
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>SQL</span>
-                            <span>85%</span>
+                            <span style="margin-right: 480px;">SQL</span>
+<span>70%</span>
+
                         </div>
                         <div class="skill-level">
-                            <div class="skill-progress" data-width="85"></div>
+                            <div class="skill-progress" data-width="70"></div>
                         </div>
                     </div>
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Pandas & NumPy</span>
-                            <span>85%</span>
+                            <span style="margin-right: 300px;">Pandas & NumPy</span>
+                            <span>80%</span>
                         </div>
                         <div class="skill-level">
-                            <div class="skill-progress" data-width="85"></div>
+                            <div class="skill-progress" data-width="80"></div>
                         </div>
                     </div>
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Data Visualization</span>
+                            <span style="margin-right: 380px;">Data Visualization</span>
                             <span>88%</span>
                         </div>
                         <div class="skill-level">
@@ -469,7 +531,7 @@
                 <div class="col-lg-6">
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Power BI</span>
+                           <span style="margin-right: 450px;">Power BI</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-level">
@@ -479,17 +541,17 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Tableau</span>
-                            <span>85%</span>
+                            <span style="margin-right: 440px;">Tableau</span>
+                            <span>65%</span>
                         </div>
                         <div class="skill-level">
-                            <div class="skill-progress" data-width="85"></div>
+                            <div class="skill-progress" data-width="65"></div>
                         </div>
                     </div>
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Machine Learning</span>
+                           <span style="margin-right: 440px;">Machine Learning</span>
                             <span>75%</span>
                         </div>
                         <div class="skill-level">
@@ -499,11 +561,11 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>JavaScript</span>
-                            <span>80%</span>
+                            <span style="margin-right: 430px;">JavaScript</span>
+                            <span>60%</span>
                         </div>
                         <div class="skill-level">
-                            <div class="skill-progress" data-width="80"></div>
+                            <div class="skill-progress" data-width="60"></div>
                         </div>
                     </div>
                 </div>
@@ -515,29 +577,47 @@
     <section id="projects" class="projects-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">My Projects</h2>
+                <h2 class="section-title" style="color: #d67ff8;">My Projects</h2>
+
                 <p class="section-subtitle">Some of my recent work</p>
             </div>
             
             <div class="row">
                 <!-- Project 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="H-Mart Analytics">
-                        </div>
-                        <div class="project-content">
-                            <h4>H-Mart Store Business Analytics</h4>
-                            <div class="project-tags">
-                                <span class="project-tag">Power BI</span>
-                                <span class="project-tag">Data Analysis</span>
-                                <span class="project-tag">SQL</span>
-                            </div>
-                            <p>Analyzed 100K+ transactions across 50+ stores using Power BI to uncover key revenue drivers.</p>
-                            <a href="https://github.com/789MohdAsif/smart-data-Visulazation" class="btn btn-primary btn-sm" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
+  <div class="project-card">
+    <div class="project-img">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="H-Mart Analytics">
+    </div>
+    <style>
+    .project-title {
+  color: #222;                /* Dark visible text color */
+  font-weight: 700;           /* Makes it bold */
+  font-size: 1.25rem;         /* Slightly larger title */
+  text-align: center;         /* Center the title */
+  margin-top: 15px;           /* Space from image */
+  margin-bottom: 10px;        /* Space before tags */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25); /* Adds soft shadow */
+}
+</style>
+
+    <div class="project-content">
+      <h4 class="project-title">H-Mart Store Business Analytics</h4>
+      <div class="project-tags">
+        <span class="project-tag">Power BI</span>
+        <span class="project-tag">Data Analysis</span>
+        <span class="project-tag">SQL</span>
+      </div>
+      <ul>
+        <li>Analyzed 100K+ transactions across 50+ stores using Power BI to uncover key revenue drivers.</li>
+        <li>Created interactive dashboards to visualize sales performance, profit margins, and customer behavior.</li>
+        <li>Identified underperforming regions and products, driving data-driven business decisions.</li>
+      </ul>
+      <a href="https://github.com/789MohdAsif/smart-data-Visulazation" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+    </div>
+  </div>
+</div>
+
                 
                 <!-- Project 2 -->
                 <div class="col-lg-4 col-md-6">
@@ -546,13 +626,17 @@
                             <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="COVID-19 Analytics">
                         </div>
                         <div class="project-content">
-                            <h4>COVID-19 Data Analytics</h4>
+                            <h4 class="project-title">Covid_19 Data Visualization</h4>
                             <div class="project-tags">
                                 <span class="project-tag">Python</span>
                                 <span class="project-tag">Pandas</span>
                                 <span class="project-tag">Visualization</span>
                             </div>
-                            <p>Analyzed 500K+ COVID-19 records to identify global vaccination trends and regional efficiency differences.</p>
+                            <ul>
+  <li>Analyzed 500K+ COVID-19 records to identify global vaccination trends and regional efficiency differences.</li>
+  <li>Utilized Python (Pandas, NumPy, Matplotlib) for data cleaning, transformation, and visualization.</li>
+  <li>Presented actionable insights through dashboards and comparative analysis across countries.</li>
+</ul>
                             <a href="https://github.com/789MohdAsif/Covid_19_Visulazations" class="btn btn-primary btn-sm" target="_blank">View Project</a>
                         </div>
                     </div>
@@ -562,21 +646,80 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="project-card">
                         <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Weather App">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Student-Mangment-Data</h4>
+                            <div class="project-tags">
+                                <span class="project-tag">SQL</span>
+
+<span class="project-tag">Database Design</span>
+
+<span class="project-tag">ER Diagram</span>
+
+<span class="project-tag">CRUD Operations</span>
+                            </div>
+                            <ul>
+  <li>A comprehensive MySQL-based system designed to organize and manage student, course, and teacher information with powerful analytics and reporting capabilities.</li>
+  <li>Easily add, edit, and manage student profiles with comprehensive information tracking.</li>
+  <li>Organize courses, assign teachers, and track enrollment with an intuitive management system.</li>
+</ul>
+                            <a href="https://github.com/MohdAsifAI-DS25/Student-Mangment-Data" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+                        </div>
+                       </div>
+                    </div>
+                        <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Weather App">
+                        </div>
+                        <div class="project-content">
+                           <h4 class="project-title">Matplotlib&Seaborn Different Technique</h4>
+                            <div class="project-tags">
+                                <span class="project-tag">Matplotlib</span>
+<span class="project-tag">Seaborn</span>
+<span class="project-tag">Data Visualization</span>
+<span class="project-tag">Analytics</span>
+                            </div>
+                            <ul>
+  <li>Developed a responsive web application that provides real-time weather updates for any city using API integration.</li>
+  <li>Utilized <strong>Matplotlib</strong> to create line charts and bar plots for temperature trends, humidity, and wind speed over time.</li>
+  <li>Implemented <strong>Seaborn</strong> for advanced statistical visualizations such as heatmaps, distribution plots, and correlation matrices.</li>
+  <li>Designed visually appealing dashboards combining Matplotlib and Seaborn to present weather insights clearly and interactively.</li>
+</ul>
+                            <a href="https://github.com/MohdAsifAI-DS25/Matplot-seabornIntro" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img">
                             <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Weather App">
                         </div>
                         <div class="project-content">
-                            <h4>Real-Time Weather App</h4>
+                            <h4 class="project-title">Weather_App</h4>
                             <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">API</span>
-                                <span class="project-tag">Web Development</span>
+                                <span class="project-tag">HTML5</span>
+<span class="project-tag">CSS3</span>
+<span class="project-tag">JavaScript</span>
+<span class="project-tag">API Integration</span>
+<span class="project-tag">OpenWeatherMap API</span>
+<span class="project-tag">JSON</span>
+<span class="project-tag">Responsive Design</span>
                             </div>
-                            <p>Developed a responsive web application that provides real-time weather updates for any city using API integration.</p>
+                      <ul>
+  <li>Developed a responsive web application for real-time weather updates.</li>
+  <li>Integrated OpenWeatherMap API to fetch live weather data for any city.</li>
+  <li>Implemented dynamic UI updates using JavaScript and JSON data parsing.</li>
+  <li>Designed a clean and responsive layout with HTML5 and CSS3.</li>
+  <li>Ensured seamless user experience across desktop and mobile devices.</li>
+</ul>
                             <a href="https://github.com/789MohdAsif/Weather_App" class="btn btn-primary btn-sm" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
-            </div>
             
             <div class="text-center mt-5">
                 <a href="https://github.com/789MohdAsif" class="btn btn-primary btn-custom" target="_blank">
@@ -646,7 +789,7 @@
     <!-- Footer -->
     <footer class="py-4 text-center" style="background: var(--dark-color); color: white;">
         <div class="container">
-            <p>&copy; 2023 Mohammad Asif. All Rights Reserved.</p>
+            <p>&copy; 2024 Mohammad Asif. All Rights Reserved.</p>
         </div>
     </footer>
 
